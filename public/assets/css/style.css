@@ -1,0 +1,8 @@
+div.devoured, div.notDevoured {
+    background-color: rgb(126, 0, 0);
+    color: #fff;
+}
+
+body {
+    background: url(../img/pixel-art-cheeseburger-seamless-background.jpg)
+}
