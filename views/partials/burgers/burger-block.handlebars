@@ -1,0 +1,9 @@
+<div class="burgerDiv">
+
+    <a class="waves-effect waves-light btn" data-id={{this.id}}><i class="material-icons left">cloud</i>{{this.name}}</a>
+    
+    {{#unless this.devoured}}
+    <button class="devour" data-id={{this.id}}>Devour</button>
+    {{/unless}}
+
+</div>

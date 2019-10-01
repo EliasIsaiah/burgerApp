@@ -1,8 +1,14 @@
 div.devoured, div.notDevoured {
     background-color: rgb(126, 0, 0);
     color: #fff;
+    margin-top: 1rem;
 }
 
 body {
-    background: url(../img/pixel-art-cheeseburger-seamless-background.jpg)
+    background: url(../img/pixel-art-cheeseburger-seamless-background.jpg);
+}
+
+
+div.container {
+    height: 97vh;
 }
