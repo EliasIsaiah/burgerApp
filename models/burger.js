@@ -31,3 +31,5 @@ sequelize.sync({ force: true })
     .then(data => {
         console.log(data.toJSON());
     });
+
+module.exports = Burger;
