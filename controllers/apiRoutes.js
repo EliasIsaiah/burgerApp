@@ -3,16 +3,18 @@ const Burger = require("../models/burger.js");
 
 // const friends = require("../data/friends.js")
 
-routes.post('/add/:name', (req, res) => { //localhost:3000/api
-  // res.status(200).json({ message: 'apiRoutes Connected!' });
-  // res.json(friends.addFriend(req.body.name, req.body.photo, req.body.answers));
+routes.post('/add', (req, res) => { //localhost:3000/api
+  
+  console.log("body", req.body);
+
+  const {burger_name, devoured} = req.body;
+  
   Burger.create({
-    burger_name: `${req.param.name}`,
-    devoured: false
+    burger_name: burger_name,
+    devoured: devoured
   }).then(function(results) {
     res.json(results);
   }).catch(err => { throw err });
-  // friends.addFriend(req.body.name, req.body.photo, req.body.answers);
 });
 
 routes.get("/all", function(req, res) {
