@@ -1,8 +1,9 @@
 const Sequelize = require('sequelize');
 const uuid = require('uuid/v4');
+const keys = require('../keys.js')
 
 // Option 1: Passing parameters separately
-const sequelize = new Sequelize('burgerDatabase', 'root', 'root', {
+const sequelize = new Sequelize('burgerDatabase', keys.sqlUser, keys.sqlSecret, {
     host: 'localhost',
     dialect: 'mysql'
 });
