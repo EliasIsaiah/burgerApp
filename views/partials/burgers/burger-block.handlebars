@@ -1,6 +1,6 @@
-<div class="burgerDiv">
+<div class="burgerDiv" data-id="{{this.uuid}}" data-name="{{this.burger_name}}">
 
-    <div class="flow-text red burger" data-id="{{this.uuid}}"><i class="fas fa-hamburger"></i> {{this.burger_name}}</div>
+    <div class="flow-text red burger"><i class="fas fa-hamburger"></i> {{this.burger_name}}</div>
     {{#unless this.devoured}}
     <a class="devour flow-text waves-effect waves-light btn" data-id="{{this.uuid}}">Devour</a>
     {{/unless}}
