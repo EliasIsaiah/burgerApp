@@ -8,9 +8,12 @@ routes.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname, "..", "public", "home.html"));
   Burger.findAll({}).then(function (results) {
 
-    res.render("index", {burgers: results});
+    res.render("index", { burgers: results });
 
-  }).catch(err => { throw err });
+  }).catch(err => {
+    res.status(500)
+    throw err
+  });
 
 });
 

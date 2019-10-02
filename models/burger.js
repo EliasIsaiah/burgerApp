@@ -1,12 +1,6 @@
-const Sequelize = require('sequelize');
 const uuid = require('uuid/v4');
-const keys = require('../keys.js')
-
-// Option 1: Passing parameters separately
-const sequelize = new Sequelize('burgerDatabase', keys.sqlUser, keys.sqlSecret, {
-    host: 'localhost',
-    dialect: 'mysql'
-});
+const Sequelize = require('sequelize');
+const sequelize = require('./sequelize.js');
 
 sequelize
   .authenticate()
