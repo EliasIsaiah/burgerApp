@@ -49,7 +49,14 @@ sequelize.sync({ force: true })
   })).then(() => Burger.create({
     burger_name: 'veggieburger',
     devoured: false
-})).then(data => {
+})).then(() => Burger.create({
+  burger_name: 'bacon double cheeseburger',
+  devoured: true
+})).then(() => Burger.create({
+  burger_name: 'double cheeseburger with egg',
+  devoured: false
+}))
+.then(data => {
         console.log(data.toJSON());
     });
 
