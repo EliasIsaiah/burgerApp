@@ -31,4 +31,17 @@ routes.get("/all", function (req, res) {
   }).catch(err => { throw err });
 });
 
+routes.post("/devour", (req, res) => {
+  console.log("body", req.body);
+  const {id} = req.body;
+  
+  Burger.update({
+    devoured: true
+  },{
+    where: {
+      uuid: id
+    }
+  }).then(results => res.json(results))
+});
+
 module.exports = routes;
