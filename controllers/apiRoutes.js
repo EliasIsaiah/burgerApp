@@ -41,7 +41,10 @@ routes.post("/devour", (req, res) => {
     where: {
       uuid: id
     }
-  }).then(results => res.json(results))
+  }).then(results => res.json(results)).catch(err => {
+    res.status(500).send("database error");
+    throw err;
+  })
 });
 
 module.exports = routes;
