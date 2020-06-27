@@ -19,7 +19,7 @@ routes.post('/add', (req, res) => { //localhost:3000/api
 
 routes.get("/all", function (req, res) {
 
-  // Finding all Chirps, and then returning them to the user as JSON.
+  // Finding all burgers, and then returning them to the user as JSON.
   // Sequelize queries are asynchronous, which helps with perceived speed.
   // If we want something to be guaranteed to happen after the query, we'll use
   // the .then function
